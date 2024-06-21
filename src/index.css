@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Playwrite+NG+Modern:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+
+
+*{
+  scrollbar-width: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title{
+  font-family: "Concert One", sans-serif;
 }
+
+.handwritten {
+  font-family: 'Dancing Script', cursive;
+}
+
+.rubik{
+  font-family: 'Rubik', sans-serif;
+
+}
+
+.name {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.description {
+  font-family: 'Playwrite NG Modern',sans-serif;
+}
+
+.bg-violet-purple {
+  background: linear-gradient(135deg, #7b2cbf, #9d4edd, #c77dff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-violet-purple::before,
+.bg-violet-purple::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index:1;
+  animation: animate 10s linear infinite;
+}
+
+.bg-violet-purple::before {
+  top: -100px;
+  left: -100px;
+}
+
+.bg-violet-purple::after {
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.5) translateY(-50px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.shadow-thin-neon-violet {
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.7);
+}
+
+.animated-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.animated-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bubble-burst {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.burst-animation {
+  animation: bubble-burst 0.5s ease-in-out;
+}
+
+/* Add this CSS to your global stylesheet or a module.css file */
+
+@keyframes bubble {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200vh) scale(1);
+  }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -10%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: bubble 10s infinite;
+}
+
+.bubble:nth-child(1) { background: #D8BFD8; animation-duration: 8s; animation-delay: 0s; left: 5%; }
+.bubble:nth-child(2) { background: #FFB6C1; animation-duration: 7s; animation-delay: 2s; left: 10%; }
+.bubble:nth-child(3) { background: #EE82EE; animation-duration: 8s; animation-delay: 4s; left: 15%; }
+.bubble:nth-child(4) { background: #DA70D6; animation-duration: 6s; animation-delay: 1s; left: 20%; }
+.bubble:nth-child(5) { background: #FF69B4; animation-duration: 10s; animation-delay: 3s; left: 25%; }
+.bubble:nth-child(6) { background: #FF00FF; animation-duration: 9s; animation-delay: 2s; left: 30%; }
+.bubble:nth-child(7) { background: #DB7093; animation-duration: 6s; animation-delay: 4s; left: 35%; }
+.bubble:nth-child(8) { background: #BA55D3; animation-duration: 8s; animation-delay: 5s; left: 40%; }
+.bubble:nth-child(9) { background: #9370DB; animation-duration: 10s; animation-delay: 3s; left: 45%; }
+.bubble:nth-child(10) { background: #D8BFD8; animation-duration: 7s; animation-delay: 2s; left: 50%; }
+.bubble:nth-child(11) { background: #FFB6C1; animation-duration: 9s; animation-delay: 4s; left: 55%; }
+.bubble:nth-child(12) { background: #EE82EE; animation-duration: 8s; animation-delay: 1s; left: 60%; }
+.bubble:nth-child(13) { background: #DA70D6; animation-duration: 6s; animation-delay: 3s; left: 65%; }
+.bubble:nth-child(14) { background: #FF69B4; animation-duration: 10s; animation-delay: 5s; left: 70%; }
+.bubble:nth-child(15) { background: #FF00FF; animation-duration: 9s; animation-delay: 2s; left: 75%; }
+.bubble:nth-child(16) { background: #DB7093; animation-duration: 6s; animation-delay: 4s; left: 80%; }
+.bubble:nth-child(17) { background: #BA55D3; animation-duration: 8s; animation-delay: 3s; left: 85%; }
+.bubble:nth-child(18) { background: #9370DB; animation-duration: 10s; animation-delay: 1s; left: 90%; }
+.bubble:nth-child(19) { background: #D8BFD8; animation-duration: 8s; animation-delay: 3s; left: 95%; }
+.bubble:nth-child(20) { background: #FFB6C1; animation-duration: 7s; animation-delay: 2s; left: 7%; }
+.bubble:nth-child(21) { background: #EE82EE; animation-duration: 9s; animation-delay: 1s; left: 14%; }
+.bubble:nth-child(22) { background: #DA70D6; animation-duration: 6s; animation-delay: 4s; left: 21%; }
+.bubble:nth-child(23) { background: #FF69B4; animation-duration: 10s; animation-delay: 3s; left: 28%; }
+.bubble:nth-child(24) { background: #FF00FF; animation-duration: 9s; animation-delay: 5s; left: 35%; }
+.bubble:nth-child(25) { background: #DB7093; animation-duration: 6s; animation-delay: 2s; left: 42%; }
+.bubble:nth-child(26) { background: #BA55D3; animation-duration: 8s; animation-delay: 4s; left: 49%; }
+.bubble:nth-child(27) { background: #9370DB; animation-duration: 10s; animation-delay: 1s; left: 56%; }
+.bubble:nth-child(28) { background: #D8BFD8; animation-duration: 8s; animation-delay: 3s; left: 63%; }
+.bubble:nth-child(29) { background: #FFB6C1; animation-duration: 7s; animation-delay: 2s; left: 70%; }
+.bubble:nth-child(30) { background: #EE82EE; animation-duration: 9s; animation-delay: 4s; left: 77%; }
+
+
+
