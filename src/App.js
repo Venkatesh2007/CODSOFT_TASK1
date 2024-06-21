@@ -9,6 +9,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import './index.css';
 
+//This is App.js where Routing takes place
 function App() {
   return (
     <Router>
