@@ -58,9 +58,10 @@ After starting the development server, open your browser and navigate to `http:/
 ## Contact
 Feel free to get in touch with me via the contact form on the portfolio or through the following channels:
 
-- Email: your-email@example.com
-- LinkedIn: [your-linkedin-profile](https://www.linkedin.com/in/badamvenkatesh)
-- GitHub: [your-github-profile](https://github.com/Venkatesh2007)
+- Email: badamvenkatesh2007@gmail.com
+- LinkedIn: [Badam Venkatesh](https://www.linkedin.com/in/badamvenkatesh)
+- GitHub: [Badam Venkatesh](https://github.com/Venkatesh2007)
 
 Thank you for visiting my portfolio!
+# CODSOFT_TASK1
 # CODSOFT_TASK1
